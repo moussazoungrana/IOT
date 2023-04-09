@@ -91,7 +91,7 @@ const wrapper = d3.select("#wrap");
 
 d3.interval(() => {
     coords.unshift({
-        y: sensorData,
+        y: sensorData/10,
         x: new Date()
     })
 
