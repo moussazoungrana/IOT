@@ -14,7 +14,7 @@ board.on("ready", () => {
         console.log("-----------------");
         console.log(led.value);
 
-        if (sensor.value < 500){
+        if (sensor.value < 200){
             led.on();
             //led.fade(255,2000);
             //led.fadeIn(2000);
