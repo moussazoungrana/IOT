@@ -1,7 +1,6 @@
 const btnAuto = document.querySelector('#btn-auto');
 const btnManual = document.querySelector('#btn-manual');
 const baseUri = 'http://localhost:3000';
-let timerInterval = null;
 
 function initialize(){
     if (!btnAuto || !btnManual) return;
