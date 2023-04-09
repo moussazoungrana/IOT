@@ -1,0 +1,133 @@
+@import "reset";
+
+$base-font-size: 14px;
+$mobile-breakpoint: 769px;
+$primary-color: #134e84;
+
+:root {
+  --container-padding: 20px;
+  --container-width: calc(100% - var(--container-padding) * 2);
+  --space: 8px;
+
+  /*   @media only screen and (min-width: 1040px) {
+         --container-width: 1000px;
+     }  */
+
+
+  @media only screen and (min-width: 1260px) {
+    --container-width: 1200px;
+  }
+  @media only screen and (min-width: 1360px) {
+    --container-width: 1200px;
+  }
+
+
+  @media only screen and(max-width: $mobile-breakpoint) {
+    --container-padding: 16px;
+  }
+
+  --color: #424242;
+  --green: #009688;
+  --red: #ee4c4c;
+  --primary-color: #{$primary-color};
+  --primary-color-dark: #0a2d4c;
+
+}
+
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: calc(50% - var(--container-width) / 2);
+  padding-right: calc(50% - var(--container-width) / 2);
+}
+
+
+
+body {
+  line-height: 1.6;
+  min-height: 100vh;
+  height: 100%;
+  color: black;
+  scroll-margin: 100px 0 0 0;
+  word-break: break-word;
+  font-size: $base-font-size;
+}
+.page-content--wrapper{
+  min-height: calc(100vh - 150px);
+}
+
+.main-container {
+  padding-top: 25px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #5050cc;
+  text-align: center;
+}
+
+.house-img-wrapper{
+  display: flex;
+  justify-content: center;
+}
+.house-img{
+  width: 400px;
+  @media only screen and(max-width: $mobile-breakpoint) {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.section-description{
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.sensor-text{
+  font-weight: bold;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 6px;
+  background-color: #5050cc;
+  position: relative;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .2s;
+  word-break: normal !important;
+
+  &:hover {
+    background: #7474dc;
+    //border: 1px solid $primary-color !important;
+  }
+
+  &.active {
+    background: #7474dc;
+    border: 2px solid $primary-color !important;
+  }
+}
+
+.control-section-wrapper{
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.control-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
