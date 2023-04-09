@@ -22,11 +22,13 @@ board.on("ready", () => {
     app.post('/light/auto', (req, res, next) => {
 
         led.blink(1000);
+        sensor.pause();
         res.send('Ok, auto');
     });
 
     app.post('/light/manual', (req, res, next) => {
 
+        sensor.resume();
         sensor.on("change", value => {
             console.log("Sensor: ");
             console.log("  value  : ", (sensor.value / 1024) * 100);
@@ -44,7 +46,7 @@ board.on("ready", () => {
 
     app.get('/sensor', (req, res, next) => {
         res.json({
-            led: parseFloat( ((sensor?.value / 1024) * 100)+'').toFixed(2)
+            sensor: parseFloat( ((sensor?.value / 1024) * 100)+'').toFixed(2)
         });
     });
 

@@ -181,4 +181,34 @@ body {
   align-items: center;
   gap: 16px; }
 
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+
+#wrap {
+  width: 500px;
+  height: 250px;
+  border: 1px solid lightgrey; }
+  @media only screen and (max-width: 769px) {
+    #wrap {
+      height: auto;
+      width: 100%; } }
+
+.axis {
+  font: 12px  sans-serif; }
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #B0BEC5;
+  shape-rendering: crispEdges; }
+
+.line {
+  fill: none;
+  stroke: #FF5722;
+  stroke-width: 1px; }
+
 /*# sourceMappingURL=style.css.map */

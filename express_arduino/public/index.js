@@ -1,6 +1,5 @@
 const btnAuto = document.querySelector('#btn-auto');
 const btnManual = document.querySelector('#btn-manual');
-const sensorText = document.querySelector('#sensor-text');
 const baseUri = 'http://localhost:3000';
 let timerInterval = null;
 
@@ -44,23 +43,6 @@ function initialize(){
                 console.log(err)
             });
     });
-
-    clearInterval(timerInterval)
-    timerInterval = setInterval(() => {
-        fetch(baseUri+'/sensor',
-            {
-                method: 'GET',
-            })
-            .then((res) => {
-                return res.json();
-            })
-            .then((data) => {
-                sensorText.innerText = data.led + " %";
-            })
-            .catch(function (err) {
-                console.log(err)
-            });
-    },500);
 
 
 }
