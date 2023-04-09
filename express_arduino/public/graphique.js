@@ -4,6 +4,7 @@ const sensorText = document.querySelector('#sensor-text');
 const coords = []
 const POINTS = 100;
 const MAX = 10;
+const baseUri = 'http://localhost:3000';
 let timerInterval = null;
 let sensorData = 0;
 
