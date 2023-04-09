@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const { Board, Led } = require("johnny-five");
+const { Board, Sensor, Led } = require("johnny-five");
 const board = new Board();
 
 const path = require('path')
