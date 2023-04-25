@@ -108,7 +108,7 @@ d3.interval(() => {
 document.addEventListener('DOMContentLoaded', function () {
     clearInterval(timerInterval)
     timerInterval = setInterval(() => {
-        fetch(baseUri+'/sensor',
+        fetch(baseUri+'/light/sensor',
             {
                 method: 'GET',
             })

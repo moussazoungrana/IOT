@@ -20,11 +20,20 @@ function showPosition() {
                 .then((data) => {
                     console.log(data);
 
+                    sunrise = sunrise.data;
+                    sunset = sunset.data;
 
+                    str1 =  sunrise.split(':');
+                    str2 =  sunset.split(':');
+                    str3 =  time.toTimeString().split(" ")[0].split(':');
+
+                    totalSeconds1 = parseInt(str1[0] * 3600 + str1[1] * 60 + str1[0]);
+                    totalSeconds2 = parseInt(str2[0] * 3600 + str2[1] * 60 + str2[0]);
+                    totalSeconds3 = parseInt(str3[0] * 3600 + str3[1] * 60 + str3[0]);
 // compare them
 
                     if (totalSeconds1 < totalSeconds3 && totalSeconds3 > totalSeconds2){
-                        fetch(baseUri+'/light/manual',
+                        fetch(baseUri+'/light/sunset',
                             {
                                 method: 'POST',
                             })
@@ -37,7 +46,7 @@ function showPosition() {
                             });
                     }
                     else {
-                        fetch(baseUri+'/light/on',
+                        fetch(baseUri+'/light/sunrise',
                             {
                                 method: 'POST',
                             })
