@@ -83,20 +83,17 @@ board.on("ready", () => {
         //stop the sensor when switching method
         sensor.disable();
 
-
         led.on();
         //response
         res.send('The night');
     })
 
+});
 
-    router.post('/sensor', (req, res, next) => {
-        res.json({
-            sensor: parseFloat(((aggregationAverage / 1000) * 100) + '').toFixed(2)
-        });
+router.get('/sensor', (req, res, next) => {
+    return res.json({
+        sensor: parseFloat(((aggregationAverage / 1000) * 100) + '').toFixed(2)
     });
-
-
 });
 
 module.exports = router
