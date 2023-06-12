@@ -84,6 +84,9 @@ En utilisant le modèle MVC, le projet "Smart_Home_Project" sépare clairement l
 + Express.Js: est un framework backend Node.js minimaliste, rapide et de type Sinatra qui offre des fonctionnalités et des outils robustes pour développer des applications backend évolutives. --> npm install express --save
 
 **3. Fonctionnement:**
+
+![Capture d’écran du 2023-06-12 19-12-35](https://github.com/moussazoungrana/IOT/assets/73730757/d51a598b-a81b-4de8-8ac5-b9efca5090b7)
+
 - Fonction manuelle:
 
 Dans le projet, la fonction "manual" du contrôleur de l'index est responsable d'allumer la LED de la maison en fonction de la luminosité de la pièce. Lorsque l'utilisateur clique sur le bouton correspondant, le contrôleur récupère l'état manuel du routeur (light.js).
