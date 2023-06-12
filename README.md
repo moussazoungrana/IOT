@@ -84,7 +84,7 @@ En utilisant le modèle MVC, le projet "Smart_Home_Project" sépare clairement l
 + Express.Js: est un framework backend Node.js minimaliste, rapide et de type Sinatra qui offre des fonctionnalités et des outils robustes pour développer des applications backend évolutives. --> npm install express --save
 
 **3. Fonctionnement:**
-**- Fonction manuelle:**
+- Fonction manuelle:
 
 Dans le projet, la fonction "manual" du contrôleur de l'index est responsable d'allumer la LED de la maison en fonction de la luminosité de la pièce. Lorsque l'utilisateur clique sur le bouton correspondant, le contrôleur récupère l'état manuel du routeur (light.js).
 
@@ -95,7 +95,7 @@ Lorsque le contrôleur de l'index récupère l'état manuel du routeur, il peut 
 Ainsi, le routeur (light.js) joue un rôle central en prenant en charge toutes les opérations sur la maison, que ce soit pour le bouton manuel ou automatique. Il permet au contrôleur de communiquer avec les composants nécessaires pour contrôler l'éclairage et assure une coordination efficace entre les différentes fonctionnalités de l'application.
 
 
-**+ Fonction automatique:**
+* Fonction automatique:
 
 La fonction automatique du projet "Smart_Home_Project" est responsable de l'allumage automatique de la LED de la maison en fonction de la luminosité ambiante. Cette fonction permet à l'application de réagir de manière autonome aux conditions de luminosité de la pièce sans intervention manuelle de l'utilisateur.
 Lorsque le mode automatique est activé, le contrôleur de l'index communique avec le routeur (light.js) pour récupérer l'état automatique. En fonction de cet état et des mesures de luminosité effectuées, le contrôleur peut prendre la décision d'allumer ou d'éteindre la LED en fonction de seuils prédéfinis.
@@ -106,8 +106,8 @@ https://github.com/moussazoungrana/IOT/assets/125995632/89382503-59f9-4a0f-924e-
 
 
 
-**+ Affichage des donnees du capteur **
++ Affichage des donnees du capteur:
 
 
-**+ Sunset / Sunrise **
+- Sunset / Sunrise:
 
