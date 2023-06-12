@@ -108,6 +108,19 @@ https://github.com/moussazoungrana/IOT/assets/125995632/89382503-59f9-4a0f-924e-
 
 + Affichage des donnees du capteur:
 
+Dans cette étape, l'objectif est de créer un visuel représentant les données du capteur sous forme d'un diagramme. Pour cela, on commence par importer la bibliothèque D3.js en utilisant la CDN de jsDelivr. La version spécifiée est la version 7 et on utilise l'importation ES modules pour l'intégration avec le projet.
+
+Pour tester le fonctionnement de la visualisation, on utilise la fonction random() pour générer des données de test. Cela permet d'obtenir un ensemble de valeurs aléatoires qui simulent les mesures capturées par le capteur.
+
+Cependant, l'objectif ultime est de remplacer la fonction random() par les vraies données de l'agrégation du capteur. Ces données réelles fourniront une lecture plus précise et pertinente du diagramme.
+
+En suivant ces étapes, il est possible de créer une visualisation efficace des données capturées par le capteur en utilisant D3.js et en remplaçant la fonction random() par les données réelles de l'agrégation du capteur. Cela permet d'obtenir une meilleure lecture et compréhension des tendances et des variations des données capturées.
+
 
 - Sunset / Sunrise:
 
+Dans cette étape, l'API sunrise-sunset est utilisée pour récupérer l'heure du lever et du coucher du soleil. Ces informations sont ensuite utilisées pour automatiser l'allumage ou l'extinction de la LED en fonction de ces horaires. Le routeur dispose de deux méthodes pour gérer ces fonctionnalités : sun_down et sun_up.
+
+La méthode sun_down est responsable de récupérer l'heure du coucher du soleil à partir de l'API sunrise-sunset. Elle effectue une requête à l'API en spécifiant les coordonnées géographiques du lieu, puis récupère l'heure correspondante du coucher du soleil. Cette méthode est appelée périodiquement, par exemple toutes les heures, pour mettre à jour l'heure du coucher du soleil.
+
+La méthode sun_up est chargée de comparer l'heure du coucher du soleil avec l'heure actuelle du système. Elle récupère l'heure actuelle du système et la compare avec l'heure du coucher du soleil. Si l'heure actuelle est supérieure ou égale à l'heure du coucher du soleil, la méthode éteint la LED. Sinon, elle l'allume.
