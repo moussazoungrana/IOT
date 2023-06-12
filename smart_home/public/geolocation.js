@@ -1,6 +1,9 @@
 let sunrise;
 let sunset;
 let time = new Date(Date.now());
+const textSunset = document.querySelector('#text-sunset');
+const textSunrise = document.querySelector('#text-sunrise');
+
 function handleSun() {
 
     if(navigator.geolocation) {
@@ -19,16 +22,21 @@ function handleSun() {
                     const time_sunrise = new Date(sunrise).toLocaleTimeString('en',
                         { timeStyle: 'short', hour12: false, timeZone: 'UTC' })
 
+                    console.log(time_sunrise)
+                    textSunrise.innerHTML =time_sunrise;
+
                     sunset = data.results.sunset.split(" ")[0];
                     const time_sunset = new Date(sunset).toLocaleTimeString('en',
                         { timeStyle: 'short', hour12: false, timeZone: 'UTC' })
 
+                    console.log(time_sunset)
+                    textSunset.innerHTML =time_sunset;
                    const local_time = time.toTimeString().split(" ")[0];
 
 
                     if (time_sunrise < local_time && time_sunset > local_time){
                         console.log('Sunrise')
-                        fetch(baseUri+'/light/sunrise',
+                        fetch('http://localhost:3000/light/sunrise',
                             {
                                 method: 'POST',
                             })
@@ -42,7 +50,7 @@ function handleSun() {
                     }
                     else {
                         console.log('sunset')
-                        fetch(baseUri+'/light/sunset',
+                        fetch('http://localhost:3000/light/sunset',
                             {
                                 method: 'POST',
                             })

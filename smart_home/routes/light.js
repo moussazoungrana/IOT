@@ -55,7 +55,7 @@ board.on("ready", () => {
     });
 
 
-    router.get('/sunrise', (req, res) => {
+    router.post('/sunrise', (req, res) => {
         //enable the function
         sensor.enable();
         //stop the blinking
