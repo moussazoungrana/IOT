@@ -98,6 +98,11 @@ Lorsque le contrôleur de l'index récupère l'état manuel du routeur, il peut 
 Ainsi, le routeur (light.js) joue un rôle central en prenant en charge toutes les opérations sur la maison, que ce soit pour le bouton manuel ou automatique. Il permet au contrôleur de communiquer avec les composants nécessaires pour contrôler l'éclairage et assure une coordination efficace entre les différentes fonctionnalités de l'application.
 
 
+https://github.com/moussazoungrana/IOT/assets/73730757/ca07ee02-c8aa-4218-9129-cd5b6ef7d6ec
+
+
+
+
 * Fonction automatique:
 
 La fonction automatique du projet "Smart_Home_Project" est responsable de l'allumage automatique de la LED de la maison en fonction de la luminosité ambiante. Cette fonction permet à l'application de réagir de manière autonome aux conditions de luminosité de la pièce sans intervention manuelle de l'utilisateur.
