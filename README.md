@@ -132,3 +132,7 @@ Dans cette étape, l'API sunrise-sunset est utilisée pour récupérer l'heure d
 La méthode sun_down est responsable de récupérer l'heure du coucher du soleil à partir de l'API sunrise-sunset. Elle effectue une requête à l'API en spécifiant les coordonnées géographiques du lieu, puis récupère l'heure correspondante du coucher du soleil. Cette méthode est appelée périodiquement, par exemple toutes les heures, pour mettre à jour l'heure du coucher du soleil.
 
 La méthode sun_up est chargée de comparer l'heure du coucher du soleil avec l'heure actuelle du système. Elle récupère l'heure actuelle du système et la compare avec l'heure du coucher du soleil. Si l'heure actuelle est supérieure ou égale à l'heure du coucher du soleil, la méthode éteint la LED. Sinon, elle l'allume.
+
+[Capture vidéo du 12-06-2023 19:18:30.webm](https://github.com/moussazoungrana/IOT/assets/73730757/3a18d598-b4b6-41f1-b17f-adf8ca06b532)
+
+
